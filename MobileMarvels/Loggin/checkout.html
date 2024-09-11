@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkout.css">
+    <title>Responsive Checkout Form</title>
+    <link rel="icon" type="image/x-icon" href="/Products/Images/Logos/Untitled-3.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="/index.html">Home</a>
+            <a href="/Products/products.php">Products</a>
+            <a href="/Contact/contact.html">Contact Us</a>
+            <a href="/Aboutus/aboutus.html">About Us</a>
+            <a href="/Loggin/loggin.html">Login</a>
+            <a href="/Register/register.html">Register</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; Enter the Website</a>
+    
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <span class="menu-icon" onclick="openNav()">
+            <i class="fas fa-home"></i>
+        </span>
+        
+        <div class="container-topic">
+            <a href="../Products/Images/Logos/Untitled-1.png" class="logo">Mobile Marvels</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Checkout Form</h2>
+        <div class="row">
+            <div class="col-50">
+                <h3>Billing Address</h3>
+                <form id="checkoutform" action="MobileMarvels/Loggin/orders.php" method="post">
+                    <div class="form-group">
+                        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="A.D Saman Kumara" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                        <input type="email" id="email" name="email" placeholder="samankumara@gmail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city"><i class="fa fa-institution"></i> City</label>
+                        <input type="text" id="city" name="city" placeholder="Malabe" required>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-50">
+                            <div class="form-group">
+                                <label for="state">Province</label>
+                                <input type="text" id="state" name="province" placeholder="Western" required>
+                            </div>
+                        </div>
+                        <div class="col-50">
+                            <div class="form-group">
+                                <label for="zip">Zip</label>
+                                <input type="text" id="zip" name="zip" placeholder="10001" required>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <h3>Payment</h3>
+                    <div class="form-group">
+                        <label for="cname">Name on Card</label>
+                        <input type="text" id="cname" name="cardname" placeholder="Saman Kumara" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ccnum">Credit Card Number</label>
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expmonth">Exp Month</label>
+                        <input type="text" id="expmonth" name="expmonth" placeholder="September" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-50">
+                            <div class="form-group">
+                                <label for="expyear">Exp Year</label>
+                                <input type="text" id="expyear" name="expyear" placeholder="2024" required>
+                            </div>
+                        </div>
+                        <div class="col-50">
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="352" required>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                        </label>
+                    </div>
+                    <input type="submit" value="Continue to Checkout" class="btn">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+            
+        </div>
+    </div>
+     <!-- Footer -->
+  <footer class="footer">
+    <div class="container-footer">
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://facebook.com/yourcompany" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/yourcompany" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/yourcompany" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/company/yourcompany" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <!-- Address Section -->
+        <div class="address">
+            <p>Mobile Marvels</p>
+            <p>135/5 Malabe, Battaramulla, Sri Lanka, 56789</p>
+            <p>Email: <a href="mailto:info@Mobilemarvels.com">info@Mobilemarvels.com</a> | Phone: (123) 456-7890</p>
+            <p>&copy; 2024 Mobile Marvels. All rights reserved.</p>
+        </div>
+
+        <!-- Google Maps Location -->
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12650.220389312577!2d-73.9893082!3d40.7332913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259adcb5b8c1f%3A0x3c034b0ec03824d0!2sNew%20York%2C%20NY%2010011!5e0!3m2!1sen!2sus!4v1605678977583!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</footer>
+    <script src="checkoutscript.js"></script> 
+</body>
+</html>

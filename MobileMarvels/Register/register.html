@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registerstyle.css">
+    <title>Mobile Marvels</title>
+    <link rel="icon" type="image/x-icon" href="/Products/Images/Logos/Untitled-3.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="/index.html">Home</a>
+            <a href="/products.html">Products</a>
+            <a href="/contact.html">Contact Us</a>
+            <a href="/aboutus.html">About Us</a>
+            <a href="/Loggin/loggin.html">Login</a>
+            <a href="/Register/register.html">Register</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; Enter the website</a>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <span class="menu-icon" onclick="openNav()">
+            <i class="fas fa-home"></i>
+        </span>
+        
+        <div class="container-topic">
+            <a href="/Products/Images/Logos/Untitled-1.png" class="logo">Mobile Marvels</a>
+        </div>
+    </nav>
+            
+    <!-- Add wrapper for centering -->
+    <div class="wrapper">
+        
+        <div class="container">
+            <h2>Create an Account</h2>
+            <form id="registrationForm" action="/MobileMarvels/Register/connect.php" method="post">
+                <input type="text" id="name" placeholder="Full Name" required name="name">
+                <div class="error" id="nameError"></div>
+
+                <input type="text" id="phone" placeholder="+94xxxxxxxxx" required name="phone">
+                <div class="error" id="phoneError"></div>
+
+                <input type="text" id="username" placeholder="Username" required name="username">
+                <div class="error" id="usernameError"></div>
+
+                <input type="password" id="password" placeholder="Password" required name="password">
+                <div class="error" id="passwordError"></div>
+
+                <input type="password" id="confirmPassword" placeholder="Re-enter Password" required name="confirmPassword">
+                <div class="error" id="confirmPasswordError"></div>
+                <select id="country" required name="country">
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="India">India</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                </select>
+                <div class="error" id="countryError"></div>
+        
+                <input type="text" id="nic" placeholder="NIC Number" required name="nic">
+                <div class="error" id="nicError"></div>
+                <input type="submit" value="Create Account">
+            </form>
+            <div class="links">
+                <a href="/MobileMarvels/Loggin/loggin.html">Already have an account? Login here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-footer">
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://facebook.com/yourcompany" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/yourcompany" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/yourcompany" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/company/yourcompany" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <!-- Address Section -->
+            <div class="address">
+                <p>Mobile Marvels</p>
+                <p>135/5 Malabe, Battaramulla, Sri Lanka, 56789</p>
+                <p>Email: <a href="mailto:info@Mobilemarvels.com">info@Mobilemarvels.com</a> | Phone: (123) 456-7890</p>
+                <p>&copy; 2024 Mobile Marvels. All rights reserved.</p>
+            </div>
+
+            <!-- Google Maps Location -->
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12650.220389312577!2d-73.9893082!3d40.7332913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259adcb5b8c1f%3A0x3c034b0ec03824d0!2sNew%20York%2C%20NY%2010011!5e0!3m2!1sen!2sus!4v1605678977583!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </footer>
+
+    <script src="registerscript.js"></script>
+</body>

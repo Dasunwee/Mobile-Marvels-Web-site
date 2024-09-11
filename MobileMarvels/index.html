@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mobile Marvels</title>
+    <link rel="icon" type="image/x-icon" href="Products/Images/Logos/Untitled-3.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+<body>
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="Products/products.php">Products</a>
+            <a href="Contact/contact.html">Contact Us</a>
+            <a href="Aboutus/aboutus.html">About Us</a>
+            <a href="/Loggin/loggin.html">Login</a>
+            <a href="/Register/register.html">Register</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; Enter the website</a>
+        </div>
+    </div>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <span class="text">Quality Guarantee of Products</span>
+            <span class="text">Fast Returning Program</span>
+            <span class="text">No Additional Fees</span>
+        </div>
+        <div class="top-bar-right">
+            <span class="contact">+94 77 456 7890</span>
+            <span class="register"><a href="/Register/register.html" class="register-link">Register or Sign in</a></span>
+        </div>
+    </div>
+    <nav class="navbar" id="navbar">
+        <span style="font-size:26px;cursor:pointer" onclick="openNav()">
+            <i class="fas fa-home"></i> 
+        </span>
+        
+        <div class="container">
+            <a href="Products/Images/Logos/Untitled-2.png" class="logo">Mobile Marvels</a>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchFunction()">
+                <button onclick="searchFunction()">
+                    <i class="fa fa-search"></i> <!-- Modern search icon -->
+                </button>
+                <div class="cart-icon">
+                    <button onclick="toggleCart()">
+                        <i class="fa fa-shopping-cart"></i> <!-- Modern cart icon -->
+                        <span id="cart-count" class="cart-count">0</span> <!-- Cart count -->
+                    </button>
+                </div>
+                
+               
+            </div>
+        </div>
+    </nav>
+    
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Mobile Marvels</h1>
+            <p>Discover amazing products and great deals.</p>
+        </div>
+    </section>
+   
+    <div class="big-image">
+        <!-- Link the photo directly in HTML using the <img> tag -->
+        <img src="Products/Images/240827-apple-september-event-date-announcement.jpg" alt="apple bnner">
+        <div class="big-text">
+          <h1 >Apple’s iPhone 16 launch event to be held on 9th September: Here’s what to expect.</h1>
+          <p>Apple has just announced the date and time it will be holding its upcoming 2024 September event. Along with the announcement poster is a tagline that reads “It’s Glowtime”. Could this be an indication towards the new “glowing Siri” in Apple Intelligence?</p>
+          <button>See more</button>
+        </div>
+      </div>
+      <div class="big-image-p">
+      <p>The iPhone 16 lineup is most likely to be introduced during this event, featuring the iPhone 16, iPhone 16 Plus, iPhone 16 Pro, and the iPhone 16 Pro Max. The non-pro iPhone 16 and iPhone 16 Plus are expected to feature a new vertically aligned camera layout at the back, at least based on photos of dummy units that have been shared online.</p>
+    </div>
+    <!-- Product Listing -->
+    <section class="product-listing">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="Products/Images/iPhone-15-Black.jpg"alt="iPhone 15">
+                    <span class="ribbon">NEW</span></button> 
+                    <h3>Iphone 15</h3>
+                    <!-- Display both original price and discount price -->
+                    <p class="price">
+                        <span class="original-price">රු:374,990.00</span>
+                        <span class="discount-price">රු:269,990.00</span>
+                    </p>
+                    <button onclick="addToCart('Iphone 15', 269990.00)">Add to Cart</button>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="Products/Images/iPhone-15-Pro-Blue.jpg" alt="iPhone 15 Pro Blue">
+                    <span class="ribbon">NEW</span></button> 
+                    <h3>iPhone 15 Pro Blue</h3>
+                    <p class="price">
+                        <span class="original-price">රු:499,990.00</span>
+                        <span class="discount-price">රු:339,990.00</span>
+                    </p>
+                    <button onclick="addToCart('iPhone 15 Pro Blue', 339990.00)">Add to Cart</button>
+                </div>
+    
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="Products/Images/iPhone-15-Pro-Max-Titanium.jpg" alt="iPhone 15 Pro Max Titanium">
+                    <span class="ribbon">NEW</span></button> 
+                    <h3>iPhone 15 Pro Max Titanium</h3>
+                    <p class="price">
+                        <span class="original-price">රු:890,390.00</span>
+                        <span class="discount-price">රු:424,990.00</span>
+                    </p>
+                    <button onclick="addToCart('iPhone 15 Pro Max Titanium', 424990.00)">Add to Cart</button>
+                </div>
+    
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="Products/Images/iPhone-14-Blue.jpg" alt="iPhone 14 Blue">
+                    <span class="ribbon">NEW</span></button> 
+                    <h3>iPhone 14 Blue</h3>
+                    <p class="price">
+                        <span class="original-price">රු:294,990.00</span>
+                        <span class="discount-price">රු:244,990.00</span>
+                    </p>
+                    <button onclick="addToCart('iPhone 14 Blue', 244990.00)">Add to Cart</button>
+                </div>
+    
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="Products/Images/iPhone-14-Plus-Red-600x600.jpg" alt="iPhone 14 Plus Red">
+                    <span class="ribbon-out">OUT OF STOCK</span></button> 
+                    <h3>iPhone 14 Plus Red</h3>
+                    <p class="price">
+                        <span class="original-price">රු:334,990.00</span>
+                        <span class="discount-price">රු:294,990.00</span>
+                    </p>
+                    <button onclick="addToCart('iPhone 14 Plus Red', 294990.00)">Add to Cart</button>
+                </div>
+    
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="Products/Images/iPhone-12-Purple.jpg" alt="iPhone 12 Purple">
+                    <span class="ribbon">NEW</span></button> 
+                    <h3>iPhone 12 Purple</h3>
+                    <p class="price">
+                        <span class="original-price">රු:209,990.00</span>
+                        <span class="discount-price">රු:204,990.00</span>
+                    </p>
+                    <button onclick="addToCart('iPhone 12 Purple', 204990.00)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="marquee-container">
+        <div class="marquee">
+            <img src="Products/Images/Logos/l1.jpg" alt="Brand 1 Logo" class="brand-logo">
+            <img src="Products/Images/Logos/l2.jpg" alt="Brand 2 Logo" class="brand-logo">
+            <img src="Products/Images/Logos/l3.jpg" alt="Brand 3 Logo" class="brand-logo">
+            <img src="Products/Images/Logos/l4.jpg" alt="Brand 1 Logo" class="brand-logo">
+            <img src="Products/Images/Logos/l5.jpg" alt="Brand 2 Logo" class="brand-logo">
+            <img src="Products/Images/Logos/l6.jpg" alt="Brand 3 Logo" class="brand-logo">
+            <img src="Products/Images/Logos/l7.jpg" alt="Brand 1 Logo" class="brand-logo">
+            <img src="Products/Images/Logos/l8.jpg" alt="Brand 2 Logo" class="brand-logo">
+            <img src="Products/Images/Logos/l9.jpg" alt="Brand 3 Logo" class="brand-logo">
+            <img src="Products/Images/Logos/l10.jpg" alt="Brand 1 Logo" class="brand-logo">
+            <img src="Products/Images/Logos/l11.jpg" alt="Brand 2 Logo" class="brand-logo">
+            <img src="Products/Images/Logos/l12.jpg" alt="Brand 3 Logo" class="brand-logo">
+          
+          
+        </div>
+    </div>
+
+
+
+
+
+<!-- Cart Modal -->
+<div id="cart-modal" class="cart-modal" style="display: none;">
+    <div class="cart-content">
+        <h2>My Cart</h2>
+        <div id="cart-items"></div>
+        <p id="cart-total">Total: රු:0.00</p>
+        <button onclick="buyNow()">Buy Now</button>
+        <button onclick="toggleCart()">Close</button>
+    </div>
+</div>
+<div class="info-container">
+  <p class="info-text">
+    Compare the latest smartphones side by side to find the perfect device for your needs. Our detailed comparison tool allows you to evaluate key features, specifications, and user ratings for the phones you're interested in. Click the button below to start comparing and make an informed decision!
+  </p>
+  <div class="button-container">
+    <a href="/Compare/compare.html" class="comparison-button">Compare Phones</a>
+  </div>
+</div>
+
+
+<h2>Top categories this week</h2>
+
+<button class="accordion">
+    <span class="accordion-tooltip">
+        Latest Accessories . Click here !!
+        <span class="tooltip-text">Click here to expand</span>
+    </span>
+</button>
+
+<div class="panel">
+    <h2>Latest Accessories</h2>
+    <p>Explore our curated collection of the latest accessories designed to complement your tech devices perfectly. From sleek cases to advanced screen protectors, our range offers both style and functionality. Stay ahead of the curve with high-quality accessories that enhance your device's performance and appearance. Discover the perfect addition to your tech setup today!</p>
+    
+    <div class="row-cat">
+        <div class="column-cat">
+            <img src="Products/Images/cat1.jpg" alt="Galaxy A35 5G" class="product-image">
+            <div class="overlay-latest">
+              <h3>Galaxy A35 5G - 6.6 inches</h3>
+              <ul class="features">
+                <li>Infinity-O display with Super AMOLED</li>
+                <li>120Hz, 1000 nits Display</li>
+                <li>50 MP Main Camera</li>
+                <li>5000mAh Battery</li>
+                <li>With 06 Months Shop Warranty</li>
+              </ul>
+              <p class="price">
+                <span class="discount-price">රු:114,990.00</span>
+              </p>
+              <button onclick="addToCart('Galaxy A35 5G', 204990.00)">Add to Cart</button>
+            </div>
+          </div>
+        <div class="column-cat">
+          <img src="Products/Images/cat2.jpg" alt="JBL Flip 6 Portable Waterproof Speaker" class="product-image">
+          <div class="overlay-latest">
+            <h3>JBL Flip 6 Portable Waterproof Speaker</h3>
+            <ul class="features">
+              <li>Bold design</li>
+              <li>USB Charging protection</li>
+              <li>Wireless Bluetooth streaming</li>
+              <li>IP67 Water-proof & Dust-proof</li>
+              <li>12 hours of playtime on a single charge</li>
+              <li>With 06 Months Shop Warranty</li>
+            </ul>
+            <p class="price">
+              <span class="discount-price">රු:35,990.00</span>
+            </p>
+            <button onclick="addToCart('JBL Flip 6 ', 35,990.00)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="column-cat">
+          <img src="Products/Images/cat3.jpg" alt="Pad Pro 2022 12.9-inch (WiFi + Cellular)" class="product-image">
+          <div class="overlay-latest">
+          <h3>Pad Pro 2022 12.9-inch (WiFi + Cellular)</h3>
+            <ul class="features">
+              <li>Supercharged by M2 Chip</li>
+              <li>12.9″ Liquid retina XDR display</li>
+              <li>Powerful new features in iPadOS 16</li>
+              <li>Ultra Wide camera with a 12MP</li>
+              <li>Storage of 256GB</li>
+              <li>8‑core CPU, 10‑core GPU</li>
+              <li>With 01 Year Local + International Warranty.</li>
+            </ul>
+            <p class="price">
+              <span class="discount-price">රු:399,990.00</span>
+            </p>
+            <button onclick="addToCart('iPad Pro 2022 ', 399,990.00)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="column-cat">
+          <img src="Products/Images/cat5.jpg"  alt="Apple EarPods (USB-C) "class="product-image">
+          <div class="overlay-latest">  <h3>Apple EarPods (USB-C)</h3>
+            <ul class="features">
+              <li>Designed by Apple</li>
+              <li>Deeper, richer bass tones</li>
+              <li>Greater protection from sweat and water</li>
+              <li>Control music and video playback</li>
+              <li>Answer and end calls</li>
+              <li>With 01 Year AppleCare Warranty.</li>
+              
+            </ul>
+            <p class="price">
+              <span class="discount-price">රු:9,990.00</span>
+            </p>
+            <button onclick="addToCart('Apple EarPods ', 9,990.00)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="column-cat">
+            <img src="Products/Images/cat4.jpg"  alt="ZTE Blade A5 2020"class="product-image">
+            <div class="overlay-latest">  <h3>ZTE Blade A5 2020</h3>
+              <ul class="features">
+                <li>6.008 inch HD water-drop notch display</li>
+                <li>‘Dual rear cameras (13MP+2MP)</li>
+                <li>8MP Front camera</li>
+                <li>Face deduction & bokeh</li>
+                <li>3200mAh Battery</li>
+                <li>2GB Ram with 32GB Rom</li>
+                <li>With 01 Year AppleCare Warranty.</li>
+                
+              </ul>
+              <p class="price">
+                <span class="discount-price">රු:29,990.00</span>
+              </p>
+              <button onclick="addToCart('ZTE Blade A5 2020 ', 29,990.00)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="column-cat">
+            <img src="Products/Images/cat6.jpg"  alt="Beats Studio Buds"class="product-image">
+            <div class="overlay-latest">  <h3>Beats Studio Buds</h3>
+              <ul class="features">
+                <li>Control the noise</li>
+                <li>Driven by premium sound</li>
+                <li>Up to 8 hours of listening time</li>
+                <li>Compatible with Apple and Android</li>
+                <li>Transparency mode allows you to hear the world around you</li>
+                <li>With 01 Year AppleCare Warranty.</li>
+                
+              </ul>
+              <p class="price">
+                <span class="discount-price">රු:44,990.00</span>
+              </p>
+              <button onclick="addToCart('Beats Studio Buds', 44,990.00)">Add to Cart</button>
+            </div>
+          </div>
+            
+      
+
+<button class="accordion">
+    <span class="accordion-tooltip">
+        Smart Devices . Click here !!
+    <span class="tooltip-text">Click here to expand</span>
+</span>
+    
+</button>
+    <div class="panel">
+        <h2>Smart Devices</h2>
+    <div class="row-cat">
+        
+         <p>Unlock the future with our cutting-edge smart devices that seamlessly integrate into your lifestyle. Whether you're looking for the latest smartphones, innovative smartwatches, or advanced home automation solutions, we offer a range of smart devices designed to enhance convenience, connectivity, and performance. Experience technology at its finest and stay connected with the best in smart innovation.</p>
+    
+        <div class="column-cat">
+            <img src="Products/Images/s1.jpg" alt="Redmi A3" class="product-image">
+            <div class="overlay-latest">
+              <h3>Redmi A3</h3>
+              <ul class="features">
+                <li>Refined and stylish design</li>
+                <li>Massive 5000mAh (typ) battery</li>
+                <li>Secure fingerprint and face unlock</li>
+                <li>Smooth 6.71” 90Hz display</li>
+                <li>With 01-Year Company Warranty</li>
+              </ul>
+              <p class="price">
+                <span class="discount-price">රු:31,490.00</span>
+              </p>
+              <button onclick="addToCart('Redmi A3', 31,490.00)">Add to Cart</button>
+            </div>
+          </div>
+        <div class="column-cat">
+          <img src="Products/Images/s2.jpg" alt="iMac 2021 (8 Core CPU & 8 Core GPU)" class="product-image">
+          <div class="overlay-latest">
+            <h3>iMac 2021 (8 Core CPU & 8 Core GPU)</h3>
+            <ul class="features">
+              <li>24” 4.5K Retina display</li>
+              <li>USB Charging protection</li>
+              <li>Up to 16GB unified memory</li>
+              <li>1080p FaceTime HD camera with M1 ISP</li>
+              <li>Magic Keyboard with Touch ID</li>
+              <li>With 1 Year Local + International Warranty</li>
+            </ul>
+            <p class="price">
+              <span class="discount-price">රු:499,990.00</span>
+            </p>
+            <button onclick="addToCart('iMac 2021 (8 Core CPU & 8 Core GPU) ', 499,990.00)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="column-cat">
+          <img src="Products/Images/s3.jpg" alt="Promate Rugged EcoLight™ Solar 20000mAh Power Bank" class="product-image">
+          <div class="overlay-latest">
+          <h3>Promate Rugged EcoLight™ Solar 20000mAh Power Bank</h3>
+            <ul class="features">
+              <li>Qualcomm quick charge 3.0p</li>
+              <li>Eco-friendly solar powered</li>
+              <li>4 USB Charging ports</li>
+              <li>Emergency LED light</li>
+              <li>High-grade solar panel</li>
+              <li>Dual recharge modesU</li>
+              <li>With 06 Months Warranty..</li>
+            </ul>
+            <p class="price">
+              <span class="discount-price">රු:25,490.00</span>
+            </p>
+            <button onclick="addToCart('Promate Rugged EcoLight™ Solar 20000mAh Power Bank ', 25,490.00)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="column-cat">
+          <img src="Products/Images/s4.jpg"  alt="Nokia 110 (2023) "class="product-image">
+          <div class="overlay-latest">  <h3>Nokia 110 (2023)</h3>
+            <ul class="features">
+              <li>Quality build</li>
+              <li>FM Radio</li>
+              <li>Long-lasting battery</li>
+              <li>Easy to use</li>
+              <li>With 01 Year Company Warranty.</li>
+              
+            </ul>
+            <p class="price">
+              <span class="discount-price">රු:8,990.00</span>
+            </p>
+            <button onclick="addToCart('Nokia 110 (2023) ', 8,990.00)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="column-cat">
+            <img src="Products/Images/s5.jpg"  alt="MacBook Air M3 ( 8 Core CPU – 8 Core GPU, 8GB/256GB )"class="product-image">
+            <div class="overlay-latest">  <h3>MacBook Air M3 ( 8 Core CPU – 8 Core GPU, 8GB/256GB )</h3>
+              <ul class="features">
+                <li>16-core Neural Engine</li>
+                <li>13.6-inch Liquid Retina display with True Tone</li>
+                <li>1080p FaceTime HD camera</li>
+                <li>MagSafe 3 charging port</li>
+                <li>Two Thunderbolt / USB 4 ports</li>
+                <li>Support for up to two external displays (with laptop lid closed)</li>
+                <li>Magic Keyboard with Touch ID.</li>
+                <li>With 01-Year Local + International Warranty.</li>
+                
+              </ul>
+              <p class="price">
+                <span class="discount-price">රු:334,990.00</span>
+              </p>
+              <button onclick="addToCart('MacBook Air M3 ( 8 Core CPU – 8 Core GPU, 8GB/256GB ) ', 334,990.00)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="column-cat">
+            <img src="Products/Images/s6.jpg"  alt="JBL LIVE 500BT Wireless Over-Ear Headphones"class="product-image">
+            <div class="overlay-latest">  <h3>JBL LIVE 500BT Wireless Over-Ear Headphones</h3>
+              <ul class="features">
+                <li>JBL Signature Sound</li>
+                <li>Get help from your Voice Assistant</li>
+                <li>Ambient Aware and TalkThru Technology</li>
+                <li>Detachable cable with remote & microphone</li>
+                <li>Up to 30 Hours Battery Life – 2 Hours Recharging Time</li>
+                <li>Agent warranty 6 months</li>
+                
+              </ul>
+              <p class="price">
+                <span class="discount-price">රු:30,990.00</span>
+              </p>
+              <button onclick="addToCart('JBL LIVE 500BT Wireless Over-Ear Headphones', 30,990.00)">Add to Cart</button>
+            </div>
+          </div>
+
+            </div>
+
+            <button class="accordion"><span class="accordion-tooltip">
+                Mac Products . Click here !!
+    <span class="tooltip-text">Click here to expand</span>
+</span></button>
+            <div class="panel">
+              <h2>Mac Products</h2>
+              <p>Discover the elegance and power of Mac products, engineered for peak performance and seamless user experience. From the latest MacBooks to the sophisticated iMacs, our range of Mac products delivers unparalleled computing power, stunning displays, and cutting-edge technology. Elevate your productivity and creativity with devices that set the standard for innovation and design.</p>
+              
+              <!-- Container for products -->
+              <div class="row-cat">
+                <!-- First product -->
+                <div class="column-cat">
+                  <img src="Products/Images/m1.jpg" alt="iPad Air (M2 Chip – 13inch – WiFi Only)" class="product-image">
+                  <div class="overlay-latest"> 
+                    <h3>iPad Air (M2 Chip – 13inch – WiFi Only)</h3>
+                    <ul class="features">
+                      <li>Serious performance in a thin and light design.</li>
+                      <li>13” & 11” Liquid Retina display</li>
+                      <li>M2 chip</li>
+                      <li>Landscape 12MP Ultra Wide front camera</li>
+                      <li>Supports Apple Pencil Pro & Supports Apple Pencil (USB-C)</li>
+                      <li>With 01-Year Apple Limited Warranty.</li>
+                    </ul>
+                    <p class="price">
+                      <span class="discount-price">රු:334,990.00</span>
+                    </p>
+                    <button onclick="addToCart('iPad Air (M2 Chip – 13inch – WiFi Only)', 334990.00)">Add to Cart</button>
+                  </div>
+                </div>
+                
+                <!-- Second product -->
+                <div class="column-cat">
+                  <img src="Products/Images/m2.jpg" alt="Apple iPad 10th Gen (WiFi + Cellular)" class="product-image">
+                  <div class="overlay-latest"> 
+                    <h3>Apple iPad 10th Gen (WiFi + Cellular)</h3>
+                    <ul class="features">
+                      <li>10.9-inch Liquid Retina display</li>
+                      <li>No paring or charging required.</li>
+                      <li>Take notes, collaborate, and work seamlessly</li>
+                      <li>A14 Bionic chip</li>
+                      <li>Express yourself, draw, and brainstorm.</li>
+                      <li>landscape 12MP Ultra Wide front camera</li>
+                      <li>With 01 Year Local + International Warranty.</li>
+                    </ul>
+                    <p class="price">
+                      <span class="discount-price">රු:218,390.00</span>
+                    </p>
+                    <button onclick="addToCart('Apple iPad 10th Gen (WiFi + Cellular)', 218,390.00)">Add to Cart</button>
+                  </div>
+                </div>
+                <div class="column-cat">
+                    <img src="Products/Images/m3.jpg" alt="iPad Pro 2022 11-inch (WiFi + Cellular)" class="product-image">
+                    <div class="overlay-latest"> 
+                      <h3>iPad Pro 2022 11-inch (WiFi + Cellular)</h3>
+                      <ul class="features">
+                        <li>Supercharged by M2 Chip</li>
+                        <li>11″ Liquid retina XDR display</li>
+                        <li>Ultra Wide camera with a 12MP</li>
+                        <li>Powerful new features in iPadOS 16</li>
+                        <li>8‑core CPU, 10‑core GPU</li>
+                        <li>With 01 Year Local + International Warranty.</li>
+                      </ul>
+                      <p class="price">
+                        <span class="discount-price">රු:369,990.00</span>
+                      </p>
+                      <button onclick="addToCart('iPad Pro 2022 11-inch (WiFi + Cellular)', 369,990.00)">Add to Cart</button>
+                    </div>
+                  </div>
+                  <div class="column-cat">
+                    <img src="Products/Images/m4.jpg" alt="iPad Pro 2022 12.9-inch (WiFi + Cellular)" class="product-image">
+                    <div class="overlay-latest"> 
+                      <h3>iPad Pro 2022 12.9-inch (WiFi + Cellular)</h3>
+                      <ul class="features">
+                        <li>Supercharged by M2 Chip</li>
+                        <li>12.9″ Liquid retina XDR display</li>
+                        <li>Ultra Wide camera with a 12MP</li>
+                        <li>Powerful new features in iPadOS 16</li>
+                        <li>8‑core CPU, 10‑core GPU</li>
+                        <li>With 01 Year Local + International Warranty.</li>
+                      </ul>
+                      <p class="price">
+                        <span class="discount-price">රු:399,990.00</span>
+                      </p>
+                      <button onclick="addToCart('iPad Pro 2022 12.9-inch (WiFi + Cellular)', 399,990.00)">Add to Cart</button>
+                    </div>
+                  </div>
+                  <div class="column-cat">
+                    <img src="Products/Images/m5.jpg" alt="iPad Air (5th Generation) – WiFi Only" class="product-image">
+                    <div class="overlay-latest"> 
+                      <h3>iPad Air (5th Generation) – WiFi Only</h3>
+                      <ul class="features">
+                        <li>SuperCharged by Apple M1 Chip</li>
+                        <li>12MP Ultrawide front camera</li>
+                        <li>Blazing fast 5G</li>
+                        <li>Works with Apple Pencil & Magic keyboard</li>
+                        <li>Five gorgeous colors</li>
+                        <li>With 01 Year Local + International Warranty.</li>
+                      </ul>
+                      <p class="price">
+                        <span class="discount-price">රු:184,990.00</span>
+                      </p>
+                      <button onclick="addToCart('iPad Air (5th Generation) – WiFi Only', 184,990.00)">Add to Cart</button>
+                    </div>
+                  </div>
+                  <div class="column-cat">
+                    <img src="Products/Images/m6.png" alt="Apple Pencil (2nd generation)" class="product-image">
+                    <div class="overlay-latest"> 
+                      <h3>Apple Pencil (2nd generation)</h3>
+                      <ul class="features">
+                        <li>Wireless pairing and charging</li>
+                        <li>Attaches magnetically</li>
+                        <li>Double-tap to change tools</li>
+                        <li>Pixel-perfect precision</li>
+                        <li>Tilt and pressure sensitivity</li>
+                        <li>Imperceptible lag</li>
+                      </ul>
+                      <p class="price">
+                        <span class="discount-price">රු:39,990.00</span>
+                      </p>
+                      <button onclick="addToCart('Apple Pencil (2nd generation)', 39,990.00)">Add to Cart</button>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            
+
+
+          
+            <footer class="footer">
+              <div class="container-footer">
+                  <!-- Social Media Icons -->
+                  <div class="social-icons">
+                      <a href="https://facebook.com/yourcompany" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                      <a href="https://twitter.com/yourcompany" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                      <a href="https://instagram.com/yourcompany" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                      <a href="https://linkedin.com/company/yourcompany" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+          
+                  <!-- Address Section -->
+                  <div class="address">
+                      <p>Mobile Marvels</p>
+                      <p>135/5 Malabe, Battaramulla, Sri Lanka, 56789</p>
+                      <p>Email: <a href="mailto:info@Mobilemarvels.com">info@Mobilemarvels.com</a> | Phone: (123) 456-7890</p>
+                      <p>&copy; 2024 Mobile Marvels. All rights reserved.</p>
+                  </div>
+          
+                  <!-- Google Maps Location -->
+                  <div class="map">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12650.220389312577!2d-73.9893082!3d40.7332913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259adcb5b8c1f%3A0x3c034b0ec03824d0!2sNew%20York%2C%20NY%2010011!5e0!3m2!1sen!2sus!4v1605678977583!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+              </div>
+          </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

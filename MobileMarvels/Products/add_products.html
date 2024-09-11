@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Form container styling */
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form label styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Input fields styling */
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Textarea specific styling */
+textarea {
+    resize: vertical;
+}
+
+/* Button styling */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <h2>Add New Product</h2>
+    <form action="/MobileMarvels/Products/insert_products.php" method="POST" enctype="multipart/form-data">
+  <label for="category">Category:</label><br>
+  <select name="category" required>
+    <option value="Iphones">Iphones</option>
+    <option value="Mac-Products">Mac Products</option>
+    <option value="Android-Phones">Android Phones</option>
+    <option value="Smart-Accessories">Smart Accessories</option>
+  </select><br><br>
+  
+  <label for="product_name">Product Name:</label><br>
+  <input type="text" name="product_name" required><br><br>
+  
+  <label for="description">Description:</label><br>
+  <textarea name="description" rows="4" required></textarea><br><br>
+  
+  <label for="original_price">Original Price:</label><br>
+  <input type="text" name="original_price" required><br><br>
+  
+  <label for="discount_price">Discount Price:</label><br>
+  <input type="text" name="discount_price" required><br><br>
+  
+  <label for="image">Product Image:</label><br>
+  <input type="file" name="image" required><br><br>
+  
+  <input type="submit" value="Add Product">
+</form>
+
+</body>
+</html>

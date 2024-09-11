@@ -1,0 +1,359 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: white;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: none;
+    color: black;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0; /* Ensure this is set to 0 */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center; /* Center content vertically if needed */
+    z-index: 1000;
+    height: 60px;
+    transition: top 0.3s;
+}
+
+.container-topic {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+    
+}
+.menu-icon {
+    font-size: 26px;
+    cursor: pointer;
+    position: absolute; /* Position it absolutely */
+    left: 20px; /* Adjust to your preference */
+}
+
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999; /* Increase z-index to bring overlay to the front */
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: relative; /* Change to relative to align with other links */
+    font-size: 25px; /* Adjust font size if needed */
+    color: #fff; /* Ensure the color contrasts with the background */
+    margin-top: 20px; /* Add some margin to separate it from the Register button */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.overlay .closebtn:hover {
+    color: #daba08; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+
+
+
+.logo {
+    display: inline-block;
+    font-size: 24px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Transform text to uppercase */
+    color: #333; /* Dark gray color for text */
+    text-decoration: none; /* Remove underline */
+    border-bottom: 2px solid #007BFF; /* Add a stylish underline */
+    padding-bottom: 4px; /* Space between text and underline */
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.logo:hover {
+    color: #007BFF; /* Change text color on hover */
+    border-bottom-color: transparent; /* Remove underline on hover */
+}
+
+.logo img {
+    max-width: 100%; /* Ensure images fit within container */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Footer Styling */
+.footer {
+    background-color: #f8f9fa; /* Light background for modern look */
+    color: #212529; /* Darker text for contrast */
+    padding: 40px 20px; /* Increased padding for a spacious look */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #dee2e6; /* Subtle border at the top */
+    width: 100%; /* Ensure footer spans the full width of the screen */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.container-footer {
+    width: 100%;
+    max-width: 1200px; /* Maximum width of the content */
+    margin: 0 auto; /* Center the content horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center text inside the container */
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #212529;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.address {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.address a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.address a:hover {
+    text-decoration: underline;
+}
+
+.map iframe {
+    width: 100%;
+    height: 250px; /* Adjust height as needed */
+    border: 0;
+    border-radius: 8px; /* Rounded corners for modern look */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .container-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left; /* Align text left on larger screens */
+    }
+
+    .map iframe {
+        height: 300px; /* Adjust height for larger screens */
+    }
+}
+.about-us {
+    padding: 100px 20px 40px; /* Add padding to top to account for fixed navbar */
+    background-color: #f4f4f4; /* Slightly lighter background for a modern look */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font family */
+}
+
+.about-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-us h1 {
+    font-size: 36px;
+    color: #222; /* Darker color for better contrast */
+    margin-bottom: 20px;
+    font-weight: 700; /* Bold for a modern feel */
+}
+
+.about-us p {
+    font-size: 18px;
+    color: #444; /* Slightly darker gray for better readability */
+    margin-bottom: 20px;
+    line-height: 1.6; /* Improved line height for readability */
+    text-align: justify; /* Justify text alignment */
+}
+
+.about-us h2 {
+    font-size: 28px;
+    color: #222; /* Darker color for better contrast */
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 600; /* Slightly bold */
+    border-bottom: 2px solid #007BFF; /* Modern underline for headings */
+    padding-bottom: 10px; /* Padding for space between text and underline */
+}
+
+.about-us ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-us ul li {
+    margin-bottom: 10px;
+    font-size: 16px; /* Slightly smaller font size for list items */
+    color: #555; /* Soft gray color */
+    line-height: 1.5; /* Improved line height for readability */
+}
+html {
+    box-sizing: border-box;
+  }
+
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+
+  h2 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 16px;
+  }
+
+  .column {
+    flex: 1 1 30%;
+    margin: 16px;
+    max-width: 300px;
+  }
+
+  @media screen and (max-width: 650px) {
+    .column {
+      flex: 1 1 100%;
+    }
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  .container h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 10px;
+  }
+
+  .container .title {
+    color: #555;
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+
+ 
+  .container p {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .button {
+    border: none;
+    outline: none;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007BFF;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }

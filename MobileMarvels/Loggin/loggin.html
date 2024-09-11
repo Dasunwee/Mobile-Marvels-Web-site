@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="logginstyle.css">
+    <title>Mobile Marvels</title>
+    <link rel="icon" type="image/x-icon" href="/Products/Images/Logos/Untitled-3.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="../index.html">Home</a>
+            <a href="../Products/products.php">Products</a>
+            <a href="../Contact/contact.html">Contact Us</a>
+            <a href="../Aboutus/aboutus.html">About Us</a>
+            <a href="../Loggin/loggin.html">Login</a>
+            <a href="/Register/register.html">Register</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; Enter the website</a>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <span class="menu-icon" onclick="openNav()">
+            <i class="fas fa-home"></i>
+        </span>
+        
+        <div class="container-topic">
+            <a href=".././Products/Images/Logos/Untitled-1.png" class="logo">Mobile Marvels</a>
+        </div>
+    </nav>
+           
+    <div class="wrapper">
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm" action="/MobileMarvels/Loggin/login.php" method="post">
+          <div class="form-group">
+            <input type="text" id="username" placeholder="Username" required name="username">
+            <p id="usernameError" class="error"></p>
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" placeholder="Password" required name="password">
+            <p id="passwordError" class="error"></p>
+          </div>
+          <input type="submit" value="Login">
+          <p id="formSuccess" class="success"></p>
+        </form>
+      
+        <div class="links">
+          <a href="#" id="forgotPassword">Forgot Password?</a>
+          <a href="/Register/register.html" id="signUp">Don't have an account? Sign up here</a>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container-footer">
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://facebook.com/yourcompany" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/yourcompany" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/yourcompany" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/company/yourcompany" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <!-- Address Section -->
+        <div class="address">
+            <p>Mobile Marvels</p>
+            <p>135/5 Malabe, Battaramulla, Sri Lanka, 56789</p>
+            <p>Email: <a href="mailto:info@Mobilemarvels.com">info@Mobilemarvels.com</a> | Phone: (123) 456-7890</p>
+            <p>&copy; 2024 Mobile Marvels. All rights reserved.</p>
+        </div>
+
+        <!-- Google Maps Location -->
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12650.220389312577!2d-73.9893082!3d40.7332913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259adcb5b8c1f%3A0x3c034b0ec03824d0!2sNew%20York%2C%20NY%2010011!5e0!3m2!1sen!2sus!4v1605678977583!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</footer>
+
+<script src="logginscript.js"></script> 
+</body>
+</html>

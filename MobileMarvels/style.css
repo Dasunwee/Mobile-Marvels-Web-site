@@ -1,0 +1,1504 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    padding-top: 60px;
+    background-color: white;
+}
+
+/* Top Bar Styles */
+.top-bar {
+    background-color:white;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+@media (max-width: 768px) {
+    .top-bar {
+        display: none; /* Hide the top bar on screens smaller than 768px */
+    }
+}
+
+.top-bar-left  {
+    display: flex;
+    align-items: center;
+    gap: 0px; /* Adds spacing between each text span */
+}
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 0px; /* Adds spacing between each text span */
+    margin-right: 30px;
+}
+
+.top-bar .text, .top-bar .contact, .top-bar .register {
+    font-size: 14px; /* Adjust font size as needed */
+    margin: 0; /* Remove any default margin from span */
+    position: relative; /* Position for pseudo-element */
+    
+}
+
+/* Add a pipe '|' symbol after each text element except the last one */
+.top-bar-left .text:not(:last-child)::after,
+.top-bar-right span:not(:last-child)::after {
+    content: "|";
+    margin-left: 20px; /* Spacing between text and pipe */
+    margin-right: 20px; /* Spacing between pipe and the next text */
+    color:#333; /* Color of the pipe */
+    border-right: 10px;
+    
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    height: 60px;
+    transition: top 0.3s;
+}
+
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+    
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding-left: 8px;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Search bar styles */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-container input[type="text"] {
+    width: 490px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+    transition: width 0.6s ease-in-out;
+}
+
+.search-container input[type="text"]:focus {
+    width: 600px;
+}
+
+.search-container button {
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.search-container button:hover {
+    background-color: #555;
+}
+
+.search-container button i {
+    font-size: 26px;
+}
+
+
+input[type="text"] {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Adjust for fixed navbar */
+.hero, .product-listing, .footer {
+    margin-top: 100px; /* Combined height of top-bar and navbar */
+}
+
+/* Hero section styles */
+.hero {
+    top: -48px;
+    background-color: #000; /* Background color for the hero section */
+    background-image: url('/Images/pexels-jessbaileydesign-788946.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Text color for contrast */
+    padding: 100px 20px; /* Increased padding for better visual balance */
+    text-align: center;
+    position: relative; /* For overlay positioning */
+    overflow: hidden; /* To ensure the overlay effect does not overflow */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Ensure the overlay is above the background image but below text */
+}
+
+/* Centered text */
+.hero h1, .hero p {
+    position: relative; /* Ensure text is above the overlay */
+    z-index: 2; /* Ensure text is above the overlay */
+    margin: 0;
+}
+
+/* Hero heading */
+.hero h1 {
+    font-size: 4em; /* Larger heading for impact */
+    font-weight: bold; /* Bold text for emphasis */
+    line-height: 1.2; /* Adjust line height for better readability */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Hero paragraph */
+.hero p {
+    font-size: 1.25em; /* Slightly larger text for readability */
+    line-height: 1.6; /* Better line spacing for readability */
+    max-width: 800px; /* Limit text width for better line length */
+    margin: 0 auto; /* Center paragraph */
+}
+
+
+/* Product listing styles */
+.product-listing {
+    padding: 70px 0;
+    background-color: #f9f9f9;
+    margin-top: 70px; /* Adjust this value as needed */
+}
+
+.product-listing h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Use CSS Grid for the product grid layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 20px;
+    justify-items: center; /* Center items in each grid cell */
+    margin: 50px ; /* Center the grid within the listing container */
+    max-width: 2000px; /* Max width for the grid */
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* Full width of grid column */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s; /* Smooth image hover effect */
+}
+
+.product-card img:hover {
+    transform: scale(1.05); /* Slight zoom on image hover */
+}
+
+.product-card h3 {
+    margin: 20px 0 10px;
+    font-size: 1.5em; /* Slightly larger font size for titles */
+    color: #333;
+}
+
+.product-card p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.product-card .price {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.product-card .original-price {
+    text-decoration: line-through; /* Strikethrough effect */
+    color: #999; /* Gray color for the original price */
+    margin-right: 10px; /* Spacing between original and discount price */
+}
+
+.product-card .discount-price {
+    color: #e63946; /* Red color to highlight the discount price */
+    font-weight: bold; /* Make the discount price bold */
+}
+
+.product-card button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth hover effect */
+}
+
+.product-card button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+
+
+.register-link {
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px; /* Adjust font size as needed */
+    padding: 8px 12px; /* Add padding to match button size */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 9999; /* Increase z-index to bring overlay to the front */
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: relative; /* Change to relative to align with other links */
+    font-size: 25px; /* Adjust font size if needed */
+    color: #fff; /* Ensure the color contrasts with the background */
+    margin-top: 20px; /* Add some margin to separate it from the Register button */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.overlay .closebtn:hover {
+    color: #daba08; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+
+/* Cart Modal Styles */
+.cart-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; /* Adjust width as needed */
+    height: 100%; /* Full height for vertical scrolling if needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: center;
+    z-index: 1200;
+    box-sizing: border-box;
+    
+}
+
+.cart-content {
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 8px;
+    width: 100%; /* Full width of the modal container */
+    max-width: 350px; /* Adjust maximum width if needed */
+
+    /* Center content within the modal */
+    text-align: center;
+    
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+.cart-item button {
+    background-color: #d41919;
+    border: none;
+    color: white;
+    padding: 5px -40px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: #eb0404;
+}
+
+.cart-content button {
+    margin-top: 10px;
+}
+/* Cart Icon */
+.cart-icon {
+   
+    right: -50px; /* Adjust based on your layout */
+    top: 50px; /* Positioned below the navbar */
+    z-index: 1100; /* Ensure it's above other elements */
+}
+
+/* Cart Icon Button */
+.cart-icon button {
+    background: none;
+    border: none;
+    font-size: 24px; /* Size of the icon */
+    cursor: pointer;
+    color: rgb(34, 34, 32); /* Color of the icon */
+    position: relative;
+}
+
+/* Modern Cart Icon Size */
+.cart-icon .fa-shopping-cart {
+    font-size: 24px; /* Adjust size if needed */
+}
+
+/* Cart Count */
+.cart-count {
+    position: absolute;
+    top: -10px; /* Adjust to position the count correctly */
+    right: -10px; /* Adjust to position the count correctly */
+    background-color: #f00; /* Background color for visibility */
+    color: #fff; /* Text color */
+    border-radius: 50%;
+    padding: 2px 8px; /* Space around the count */
+    font-size: 17px; /* Increase font size for better visibility */
+    font-weight: bold; /* Make text bold */
+}
+
+.big-image {
+  position: relative;
+    width: 100%;
+  margin-top: -48px;
+}
+
+.big-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 100%; /* Adjust opacity for the dark overlay effect */
+
+}
+
+.big-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Text color */
+    
+  }
+  
+
+  .big-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 12px 30px; /* Slightly larger padding for a more comfortable click area */
+    color: white;
+    background-color: #4CAF50; /* Green background for modern look */
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px; /* Increased font size for better readability */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover effects */
+  }
+  
+  .big-text button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    color: white;
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow for lifted effect */
+  }
+  
+  .big-text button:active {
+    background-color: #3e8e41; /* Even darker green on click */
+    transform: translateY(0); /* Reset transform to avoid "jumping" effect on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow for pressed effect */
+  }
+  
+.big-image-p{
+    margin:10px;
+    position: absolute;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Container for the images */
+.row-cat {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between images */
+    margin: 20px 0;
+  }
+  
+  /* Individual image containers */
+  .column-cat {
+    position: relative; /* For positioning the overlay */
+    flex: 1;
+    max-width: 25%; /* Adjust as needed */
+    box-sizing: border-box;
+    
+  }
+  
+  /* Styling for each image */
+  .column-cat img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid #ccc; /* Border around each image */
+    box-sizing: border-box; /* Ensure border is included in the width */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth transition for border and transform */
+
+  }
+  
+  /* Overlay styling */
+.overlay-latest {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Darker see-through background */
+    color: white;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    text-align: center;
+    font-size: 14px;
+  }
+  /* Hover effect for each column-cat */
+  .column-cat:hover img {
+    border: 2px solid #000000; /* Change border color on hover */
+  }
+
+  .column-cat:hover .overlay-latest {
+    opacity: 1;
+  }
+  /* Overlay heading styling */
+.overlay-latest h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+  }
+  
+  /* Styling for the features list */
+.features {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  /* Price styling */
+.price {
+    margin: 10px 0;
+  }
+  .discount-price {
+    font-size: 20px;
+    font-weight: bold;
+  }
+/* Button styling */
+.overlay-latest button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 12px 30px;
+    color: #fff;
+    background-color: #007bff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .overlay-latest button:hover {
+    background-color: #0056b3; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly scale up the button on hover */
+  }
+
+
+/* Styling for accordion buttons */
+.accordion {
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Style for active and hover states */
+  .accordion:hover, .accordion.active {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the plus/minus icon */
+  .accordion::after {
+    content: '\002B'; /* Unicode character for plus sign */
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    transition: transform 0.8s ease;
+  }
+  
+  /* Rotate icon when accordion is active */
+  .accordion.active::after {
+    content: '\2212'; /* Unicode character for minus sign */
+    color: #fff;
+  }
+
+  /* Center all h2 elements */
+h2 {
+    text-align: center;
+  }
+  
+ /* Tooltip container */
+.accordion-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* Tooltip text */
+  .accordion-tooltip .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%; /* Position the tooltip above the button text */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 12px;
+  }
+  
+  /* Tooltip arrow */
+  .accordion-tooltip .tooltip-text::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Show the tooltip text when hovering over the tooltip container */
+  .accordion-tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+ /* Base Marquee Styling */
+.marquee-container {
+    overflow: hidden; /* Hide overflow for smooth scrolling */
+    width: 100%; /* Full width container */
+    background-color: #f4f4f4; /* Optional: Background color for contrast */
+    margin-top: -48px;
+}
+
+.marquee {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between logos */
+    animation: marquee 20s linear infinite;
+    transition: animation-play-state 0.3s ease;
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.marquee img {
+    height: 50px; /* Adjust as needed */
+    margin: 5px; /* Space around images */
+}
+
+/* Brand logos */
+.brand-logo {
+    width: 80px; /* Adjust as needed */
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effects for logos */
+.brand-logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2); /* Slight brightness increase on hover */
+}
+
+/* Marquee animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.logo {
+    display: inline-block;
+    font-size: 24px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Transform text to uppercase */
+    color: #333; /* Dark gray color for text */
+    text-decoration: none; /* Remove underline */
+    border-bottom: 2px solid #007BFF; /* Add a stylish underline */
+    padding-bottom: 4px; /* Space between text and underline */
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.logo:hover {
+    color: #007BFF; /* Change text color on hover */
+    border-bottom-color: transparent; /* Remove underline on hover */
+}
+
+.logo img {
+    max-width: 100%; /* Ensure images fit within container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #f8f9fa; /* Light background for modern look */
+    color: #212529; /* Darker text for contrast */
+    padding: 40px 20px; /* Increased padding for a spacious look */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #dee2e6; /* Subtle border at the top */
+    width: 100%; /* Ensure footer spans the full width of the screen */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.container-footer {
+    width: 100%;
+    max-width: 1200px; /* Maximum width of the content */
+    margin: 0 auto; /* Center the content horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center text inside the container */
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #212529;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.address {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.address a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.address a:hover {
+    text-decoration: underline;
+}
+
+.map iframe {
+    width: 100%;
+    height: 250px; /* Adjust height as needed */
+    border: 0;
+    border-radius: 8px; /* Rounded corners for modern look */
+}
+/* Style for the button container */
+/* Button Container Styling */
+.button-container {
+    text-align: center; /* Center the button */
+    margin-top: 20px;
+    padding: 20px; /* Add padding around the container */
+    background-color: #f0f8ff; /* Light background color to make the button stand out */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  /* Button Styling */
+  .comparison-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #007BFF, #00BFFF); /* Gradient background */
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Match button shadow with container */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .comparison-button:hover,
+  .comparison-button:focus {
+    background: linear-gradient(135deg, #0056b3, #00aaff); /* Darker gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
+    outline: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+  }
+  
+  .comparison-button:active {
+    background: linear-gradient(135deg, #004494, #0099cc); /* Even darker gradient when clicked */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reset shadow on click */
+  }
+  
+  
+  /* Base styles */
+.info-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .info-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .comparison-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .comparison-button:hover,
+  .comparison-button:focus {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    outline: none;
+  }
+  
+  .comparison-button:active {
+    background-color: #004494;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .info-text {
+      font-size: 16px;
+      line-height: 1.5;
+      padding: 0 10px; /* Add some padding for smaller screens */
+    }
+  
+    .comparison-button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .info-text {
+      font-size: 14px;
+      line-height: 1.4;
+      padding: 0 5px; /* Reduce padding for very small screens */
+    }
+  
+    .comparison-button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  
+
+/* For mobile screens (up to 768px) */
+@media (max-width: 768px) {
+    .navbar {
+       
+        padding: 5px;
+        margin-bottom: 50px;
+        
+       
+    }
+
+    .navbar .logo {
+        font-size: 1.2em;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .search-container input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-left: 20px;
+    }
+
+    .search-container button {
+        width: 30%;
+        padding-left: -10px;
+        padding-bottom: -10px;
+        border-radius: 100px;
+        margin-top: -3px;
+    }
+
+    .cart-icon {
+        margin-left: -10px;
+       
+        
+    }
+}
+
+/* For very small screens (up to 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 5px;
+    }
+
+    .navbar .logo {
+        font-size: 1em;
+    }
+
+    .search-container input[type="text"] {
+        font-size: 14px;
+    }
+
+    .search-container button {
+        font-size: 5px;
+        padding: 3px;
+        margin-top: 3px;
+    }
+
+    .cart-icon button {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+
+/* For small screens (up to 768px) */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+        padding: 60px 10px; /* Reduced padding for smaller screens */
+        text-align: center;
+        background-size: cover;
+        margin-bottom: -48px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em; /* Smaller font size for mobile */
+        margin-bottom: 10px; /* Reduced margin */
+    }
+
+    .hero p {
+        font-size: 1em; /* Smaller font size for mobile */
+        max-width: 90%; /* Adjusted max-width for better readability */
+    }
+
+    /* Big Image */
+    .big-image {
+        margin-top: 0; /* Reset margin-top adjustment */
+        position: relative;
+    }
+
+    .big-image img {
+        height: auto; /* Adjust height to auto to maintain aspect ratio */
+    }
+
+    .big-text {
+        position: relative; /* Adjust position for mobile screens */
+        top: auto; /* Reset positioning */
+        left: auto; /* Reset positioning */
+        transform: none; /* Reset transform */
+        padding: 10px; /* Add padding for better readability */
+        text-align: center; /* Center text on mobile */
+    }
+
+    .big-text h1 {
+        font-size: 1.21em; /* Smaller font size for mobile */
+        line-height: 1.2; /* Adjust line height */
+        margin-top: 5px;
+        color: #000;
+    }
+
+    .big-text p {
+        font-size: 0.9em; /* Smaller font size for mobile */
+        margin-top: 5px;
+        color: black;
+        padding:5px;
+    }
+
+    .big-text button {
+        padding: 10px 10px; /* Adjust padding for mobile */
+        font-size: 14px; /* Smaller font size */
+        margin-bottom: 5px;
+        margin-top: -10px;
+    }
+
+    /* Big Image Paragraph */
+    .big-image-p {
+        margin: 5px 0; /* Adjust margin for mobile */
+        position: relative; /* Reset position */
+        text-align: justify; /* Maintain justification */
+        padding: 25px;
+    }
+}
+
+/* For extra small screens (up to 480px) */
+@media (max-width: 480px) {
+    /* Hero Section */
+    .hero {
+        padding: 40px 5px; /* Further reduced padding */
+    }
+
+    .hero h1 {
+        font-size: 1.8em; /* Smaller font size */
+        margin-bottom: 8px; /* Reduced margin */
+    }
+
+    .hero p {
+        font-size: 0.9em; /* Further reduced font size */
+        max-width: 100%; /* Full width */
+    }
+
+    /* Big Image */
+    .big-image img {
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .big-text {
+        padding: 5px; /* Less padding */
+    }
+
+    .big-text h1 {
+        font-size: 1.2em; /* Smaller font size */
+        line-height: 1.3; /* Adjust line height */
+    }
+
+    .big-text p {
+        font-size: 0.8em; /* Smaller font size */
+    }
+
+    .big-text button {
+        padding: 8px 15px; /* Further reduced padding */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    /* Big Image Paragraph */
+    .big-image-p {
+        margin: 5px 0; /* Further reduced margin */
+    }
+}
+/* For small screens (up to 768px) */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust for smaller screens */
+        gap: 10px; /* Reduce gap between items */
+        margin: 20px; /* Adjust margin for better fit */
+    }
+
+    .product-card {
+        padding: 15px; /* Reduce padding */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow for smaller screens */
+    }
+
+    .product-card h3 {
+        font-size: 1.2em; /* Smaller font size for product titles */
+    }
+
+    .product-card p {
+        font-size: 1em; /* Adjust font size */
+    }
+
+    .product-card .price {
+        font-size: 1em; /* Adjust price font size */
+    }
+
+    .product-card button {
+        padding: 8px 16px; /* Reduce button padding */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+/* For extra small screens (up to 480px) */
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column layout for very small screens */
+        gap: 10px; /* Maintain gap size */
+        margin: 10px; /* Further reduced margin */
+    }
+
+    .product-card {
+        padding: 10px; /* Further reduced padding */
+    }
+
+    .product-card h3 {
+        font-size: 1em; /* Smaller font size for product titles */
+    }
+
+    .product-card p {
+        font-size: 0.9em; /* Smaller font size */
+    }
+
+    .product-card .price {
+        font-size: 0.9em; /* Adjust price font size */
+    }
+
+    .product-card button {
+        padding: 6px 12px; /* Further reduce button padding */
+        font-size: 12px; /* Adjust font size */
+    }
+}
+/* For tablets and smaller devices (up to 768px) */
+@media (max-width: 768px) {
+    .marquee {
+        gap: 20px; /* Reduce gap between logos */
+    }
+
+    .marquee img {
+        height: 40px; /* Adjust image height */
+        margin: 3px; /* Adjust space around images */
+    }
+}
+
+/* For extra small screens (up to 480px) */
+@media (max-width: 480px) {
+    .marquee {
+        gap: 10px; /* Further reduce gap between logos */
+    }
+
+    .marquee img {
+        height: 30px; /* Adjust image height */
+        margin: 2px; /* Adjust space around images */
+    }
+}
+/* Mobile Devices */
+@media (max-width: 767px) {
+    /* Cart Modal */
+    .cart-modal {
+        width: 100%; /* Full width for smaller screens */
+        height: 100%; /* Full height for smaller screens */
+        justify-content: center; /* Center content horizontally */
+    }
+
+    .cart-content {
+        width: 100%; /* Full width for smaller screens */
+        max-width: none; /* Remove max-width restriction */
+        padding: 20px; /* Increase padding for better spacing */
+        margin-left: -20px;
+    }
+
+    .cart-item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .cart-item button {
+        width: 100%; /* Full width for the button */
+        padding: 10px; /* Increase padding for better touch targets */
+        margin-top: 5px; /* Add margin between buttons */
+    }
+
+    /* Cart Icon */
+    .cart-icon {
+        right: 10px; /* Adjust position for mobile screens */
+        top: 10px; /* Adjust position for mobile screens */
+    }
+
+    .cart-icon button {
+        font-size: 20px; /* Slightly smaller font size for mobile */
+    }
+
+    .cart-count {
+        top: -5px; /* Adjust position for smaller screens */
+        right: -5px; /* Adjust position for smaller screens */
+        padding: 2px 6px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+}
+
+/* Tablet Devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Cart Modal */
+    .cart-modal {
+        width: 80%; /* Reduce width for tablets */
+        max-width: 400px; /* Set a maximum width */
+    }
+
+    .cart-content {
+        padding: 15px; /* Adjust padding for tablets */
+    }
+
+    .cart-item button {
+        padding: 8px; /* Adjust padding for tablets */
+    }
+
+    /* Cart Icon */
+    .cart-icon {
+        right: -30px; /* Adjust position for tablets */
+        top: 30px; /* Adjust position for tablets */
+    }
+
+    .cart-icon button {
+        font-size: 22px; /* Adjust font size for tablets */
+    }
+
+    .cart-count {
+        top: -8px; /* Adjust position for tablets */
+        right: -8px; /* Adjust position for tablets */
+        padding: 3px 7px; /* Adjust padding for tablets */
+        font-size: 15px; /* Adjust font size for tablets */
+    }
+}
+/* Mobile Devices (up to 767px) */
+@media (max-width: 767px) {
+    /* Accordion styles */
+    .accordion {
+        font-size: 16px;
+        padding: 10px;
+        margin: 0 auto; /* Centers the accordion */
+        width: 90%; /* Make it responsive */
+    }
+
+    .accordion-tooltip .tooltip-text {
+        font-size: 10px;
+        width: 100px;
+        text-align: center;
+    }
+
+    /* Panel and content styles */
+    .panel h2 {
+        font-size: 24px;
+        text-align: center; /* Center heading */
+    }
+
+    .panel p {
+        font-size: 14px;
+        text-align: center; /* Center paragraph */
+    }
+
+    /* Product grid */
+    .row-cat {
+        display: flex;
+        flex-direction: column; /* Stack products vertically */
+        justify-content: center; /* Center product columns */
+        align-items: center; /* Ensure products are centered */
+    }
+
+    .column-cat {
+        width: 100%;
+        max-width: 300px; /* Limit max width */
+        margin-bottom: 20px;
+        text-align: center; /* Center the content inside */
+    }
+
+    .product-image {
+        width: 100%;
+        height: auto;
+        margin: 0 auto; /* Center the image */
+    }
+
+    .overlay-latest h3 {
+        font-size: 18px;
+        text-align: center; /* Center product title */
+    }
+
+    .overlay-latest .features li {
+        font-size: 12px;
+        text-align: center; /* Center feature text */
+    }
+
+    .price {
+        font-size: 14px;
+        text-align: center; /* Center price */
+    }
+
+    .discount-price {
+        font-size: 16px;
+        text-align: center; /* Center discount price */
+    }
+}
+
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Accordion styles */
+    .accordion {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .accordion-tooltip .tooltip-text {
+        font-size: 12px;
+        width: 110px;
+    }
+
+    /* Panel and content styles */
+    .panel h2 {
+        font-size: 26px;
+    }
+
+    .panel p {
+        font-size: 16px;
+    }
+
+    /* Product grid */
+    .row-cat {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .column-cat {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .product-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay-latest h3 {
+        font-size: 20px;
+    }
+
+    .overlay-latest .features li {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .discount-price {
+        font-size: 18px;
+    }
+}
+
+/* Desktop and Larger Devices (1025px and above) */
+@media (min-width: 1025px) {
+    /* Accordion styles */
+    .accordion {
+        font-size: 20px;
+        padding: 15px 20px;
+    }
+
+    .accordion-tooltip .tooltip-text {
+        font-size: 14px;
+        width: 120px;
+    }
+
+    /* Panel and content styles */
+    .panel h2 {
+        font-size: 28px;
+    }
+
+    .panel p {
+        font-size: 18px;
+    }
+
+    /* Product grid */
+    .row-cat {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .column-cat {
+        width: 33.33%;
+        margin-bottom: 20px;
+    }
+
+    .product-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay-latest h3 {
+        font-size: 22px;
+    }
+
+    .overlay-latest .features li {
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    .discount-price {
+        font-size: 20px;
+    }
+}
+/* Style for the ribbon */
+.ribbon {
+    position: absolute;
+    top: 100px; /* Adjust top position as needed */
+    left: 40px; /* Adjust left position as needed */
+    background-color:  #007bff; /* Red background for the ribbon */
+    color: #ffffff; /* White text color */
+    padding: 5px 10px;
+    border-radius: 5px; /* Rounded corners for the ribbon */
+    font-weight: bold;
+    font-size: 14px;
+    transform: rotate(-45deg); /* Rotate ribbon */
+    transform-origin: 0 0; /* Pivot point for rotation */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+  
+  /* Optional: Add a little shadow to the ribbon for better visibility */
+  .ribbon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent shadow */
+    border-radius: 5px;
+    z-index: -1; /* Place shadow behind the ribbon text */
+  }
+  .ribbon-out {
+    position: absolute;
+    top: 100px; /* Adjust top position as needed */
+    left: 30px; /* Adjust left position as needed */
+    background-color:  #c70526; /* Red background for the ribbon */
+    color: #ffffff; /* White text color */
+    padding: 5px 10px;
+    border-radius: 5px; /* Rounded corners for the ribbon */
+    font-weight: bold;
+    font-size: 14px;
+    transform: rotate(-45deg); /* Rotate ribbon */
+    transform-origin: 0 0; /* Pivot point for rotation */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+  

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to your CSS file -->
+    <style>
+        /* Add CSS to style the form as needed */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Update Product</h2>
+        <form action="/MobileMarvels/Products/update_products.php" method="POST" enctype="multipart/form-data">
+            <!-- Product ID Input -->
+            <label for="product_id">Product ID:</label>
+            <input type="text" name="product_id" required>
+            
+            <!-- Category Dropdown -->
+            <label for="category">Category:</label>
+            <select name="category" required>
+                <option value="Iphones">Iphones</option>
+                <option value="Mac-Products">Mac Products</option>
+                <option value="Android-Phones">Android Phones</option>
+                <option value="Smart-Accessories">Smart Accessories</option>
+            </select>
+            
+            <!-- Product Name Input -->
+            <label for="product_name">Product Name:</label>
+            <input type="text" name="product_name" required>
+            
+            <!-- Description Textarea -->
+            <label for="description">Description:</label>
+            <textarea name="description" rows="4" required></textarea>
+            
+            <!-- Original Price Input -->
+            <label for="original_price">Original Price:</label>
+            <input type="text" name="original_price" required>
+            
+            <!-- Discount Price Input -->
+            <label for="discount_price">Discount Price:</label>
+            <input type="text" name="discount_price" required>
+            
+            <!-- Product Image Input -->
+            <label for="image">Product Image:</label>
+            <input type="file" name="image">
+            
+            <!-- Submit Button -->
+            <input type="submit" value="Update Product">
+        </form>
+    </div>
+</body>
+</html>
